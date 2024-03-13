@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+</head>
+<body>
+    <form action="">
+    
+    <h2>Form Registrasi</h2>
+        <fieldset>
+                    
+            <!-- Fieldset untuk Biodata -->
+            <legend>Biodata</legend>
+
+            <!-- Tabel untuk menyusun input dengan label -->
+            <table>
+
+            <tr><!-- Baris untuk Nama Mahasiswa -->
+                <td>Nama Mahasiswa</td> 
+                <td>:</td>
+                <td><input type="text" name="Nama" placeholder="Nama Anda"><br></td>
+            </tr>
+
+            <tr><!-- Baris untuk No Induk Mahasiswa (disabled) -->
+                <td>No Induk Mahasiswa</td> 
+                <td>:</td>
+                <td><input type="text" name="Nama" placeholder="1203220115" disabled><br></td>
+            </tr>
+
+            <tr><!-- Baris untuk Alamat Mahasiswa -->
+                <td>Alamat Mahasiswa</td> 
+                <td>:</td>
+                <td><textarea name="alamatMhs" cols="30" rows="10" placeholder="Alamat Anda" style="width: 300px; height: 90px;"></textarea><br></td>
+            </tr>
+
+            <tr> <!-- Baris untuk Tanggal Lahir dengan dropdown tanggal, bulan, dan tahun -->
+                <td>Tanggal Lahir</td> 
+                <td>:</td>
+                <td>
+                <select name="tanggal">
+                    <option value="01">01</option>    
+                    <option value="02">02</option>    
+                    <option value="03">03</option>    
+                    <option value="04">04</option>    
+                    <option value="05">05</option>    
+                    <option value="06">06</option>    
+                    <option value="07">07</option>    
+                    <option value="08">08</option>    
+                    <option value="09">09</option>    
+                    <option value="10">10</option>    
+                    <option value="11">11</option>    
+                    <option value="12">12</option>    
+                    <option value="13">13</option>    
+                    <option value="14">14</option>    
+                    <option value="15">15</option>    
+                    <option value="16">16</option>    
+                    <option value="17">17</option>    
+                    <option value="18">18</option>    
+                    <option value="19">19</option>    
+                    <option value="20">20</option>    
+                    <option value="21">21</option>    
+                    <option value="22">22</option>    
+                    <option value="23">23</option>    
+                    <option value="24">24</option>    
+                    <option value="25">25</option>    
+                    <option value="26">26</option>    
+                    <option value="27">27</option>    
+                    <option value="28">28</option>    
+                    <option value="29">29</option>    
+                    <option value="30">30</option>    
+                    <option value="31">31</option>    
+                </select>
+                
+                <select name="Bulan">
+                    <option value="1">Januari</option>
+                    <option value="2">Februari</option>
+                    <option value="3">Maret</option>
+                    <option value="4">April</option>
+                    <option value="5">Mei</option>
+                    <option value="6">Juni</option>
+                    <option value="7">Juli</option>
+                    <option value="8">Agustus</option>
+                    <option value="9">September</option>
+                    <option value="10">Oktober</option>
+                    <option value="11">November</option>
+                    <option value="12">Desember</option>
+                </select>
+                
+                <select name="tahun">
+                    <option value="1">1990</option>
+                    <option value="2">1991</option>
+                    <option value="3">1992</option>
+                    <option value="4">1993</option>
+                    <option value="5">1994</option>
+                    <option value="6">1995</option>
+                    <option value="7">1996</option>
+                    <option value="8">1997</option>
+                    <option value="9">1998</option>
+                    <option value="10">1999</option>
+                    <option value="11">2000</option>
+                    <option value="12">2001</option>
+                    <option value="13">2002</option>
+                    <option value="14">2003</option>
+                    <option value="15">2004</option>
+                    <option value="16">2005</option>
+                    <option value="17">2006</option>
+                    <option value="18">2007</option>
+                    <option value="19">2008</option>
+                    <option value="20">2009</option>
+                    <option value="21">2010</option>
+                    <option value="22">2011</option>
+                    <option value="23">2012</option>
+                </select></td><br></tr>
+            
+            <tr><!-- Baris untuk Jenis Kelamin dengan radio button -->
+                <td>Jenis Kelamin</td> 
+                <td>:</td>
+                <td><input type="radio" name="gender">Laki-Laki
+                <input type="radio" name="gender">Perempuan<br></td>
+            </tr>
+
+            <tr><!-- Baris untuk Upload Foto -->
+                <td>Upload Foto</td> 
+                <td>:</td>
+                <td><input type="file" name="foto"><br></td>
+            </tr>
+
+            <tr><!-- Baris untuk URL Website -->
+                <td>URL Website</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="URL" placeholder="URL Website Anda" size="50">
+                </td>
+            </tr>
+
+            <tr><!-- Baris untuk Perguruan Tinggi -->
+                <td>Perguruan Tinggi</td>
+                <td>:</td>
+                <td>
+                    <input type="text" name="perguruanTinggi">
+                </td>
+            </tr>
+            </table>
+        </fieldset>
+    
+        <fieldset>
+            <!-- Fieldset untuk Info Akun -->
+            <legend>Info Akun</legend>
+            <table>
+
+                <!-- Baris untuk Email, Username, Password, dan Ulangi Password -->
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td> 
+                    <td><input type="email" name="Email" placeholder="Email Anda"></td>
+                </tr>
+                <tr>    
+                    <td><label for="username">Username</label></td>
+                    <td>:</td> 
+                    <td><input type="text" name="username" placeholder="Username Anda"></td>
+                </tr>
+                <tr>    
+                    <td><label for="password">Password</label></td>
+                    <td>:</td> 
+                    <td><input type="password" name="password" placeholder="Password Anda"></td>
+                </tr>
+                <tr>    
+                    <td><label for="repassword">Ulangi Password</label></td>
+                    <td>:</td> 
+                    <td><input type="password" name="repassword" placeholder="Password Anda"></td>
+                <br></tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <!-- Fieldset untuk Kemampuan Dasar -->
+            <legend>Kemampuan Dasar</legend>
+            <table>
+                <tr> <!-- Baris untuk Checkbox kemampuan dasar seperti HTML, CSS, Javascript, dll. -->
+                    <td>
+                        <input type="checkbox" name="HTML">
+                        <label for="HTML">HTML</label>
+                        
+                        <input type="checkbox" name="CSS">
+                        <label for="CSS">CSS</label>
+
+                        <input type="checkbox" name="Javascript">
+                        <label for="Javascript">Javascript</label>
+
+                        <input type="checkbox" name="PHP">
+                        <label for="PHP">PHP</label>
+
+                        <input type="checkbox" name="MySQL">
+                        <label for="MySQL">MySQL</label>
+
+                        <input type="checkbox" name="Laravel">
+                        <label for="Laravel">Laravel</label>
+
+                        <input type="checkbox" name="React">
+                        <label for="React">React Native</label>
+                    </td>
+                <br></tr>  
+            </table>
+        </fieldset>
+
+        <p><!-- Tombol Reset, Simpan, dan Button -->
+            <input type="reset" name="reset" value="Reset">
+            <input type="submit" name="simpan" value="Simpan">
+            <input type="button" name="button" value="Button">
+        </p>
+    </form>
+</body>
+</html>
