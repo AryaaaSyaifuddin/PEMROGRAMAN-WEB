@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /* UI Element States Selector */
+        input[type="text"]:focus {
+            outline: none;
+            border-color: darkred;
+        }
+        input[type="checkbox"]:checked + label {
+            color: coral;
+        }
+        /* Pseudo-elements Selector */
+        p::first-line {
+            font-weight:bold;
+            color:darkolivegreen;
+        }
+        /* Attribute Value Selector */
+        a[href^="https"] {
+            color: blueviolet;
+        }
+        /* Adjacent Sibling Selector */
+        input[type="checkbox"] + label {
+            margin-left: 10px;
+        }
+        /* General Sibling Selector */
+        input[type="checkbox"]:checked ~ input[type="checkbox"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: chocolate; text-decoration: solid;">SELECTOR YANG TIDAK ADA DI KODE PROGRAM SEBELUMNYA</h1>
+    <p>This is paragraph One</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>Exercita tionem, dolor officia adipisci ratione, corrupti expedita magni velit tenetur, <br">est atque excepturi repellat minima? Animi, saepe dolores cumque deleniti commodi alias.</p>
+    <br>
+    <input type="text" placeholder="....">
+    <br><br>
+    <input type="checkbox" id="mati">
+    <label for="mati">MATI</label>
+    <input type="checkbox" id="hidup">
+    <label for="hidup">HIDUP</label>
+    <br><br>
+    <a href="https://github.com/AryaaaSyaifuddin/PEMROGRAMAN-WEB">Klik di sini</a>
+</body>
+</html>
