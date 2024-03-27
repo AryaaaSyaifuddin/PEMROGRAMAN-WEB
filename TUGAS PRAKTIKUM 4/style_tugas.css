@@ -1,0 +1,242 @@
+:root {
+    --purple-color: #7F467C;
+    --bg-color:  #A2A9AC;
+    --dark-grey-color: #272B39;
+    --white-color: #fff;
+    --black-color: #000;
+    --footer-color: #A7A5A5;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+  }
+  
+  
+  .sidebar {
+    grid-area: sidebar;
+  }
+  
+  .content {
+    grid-area: main;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
+  
+  
+  .container {
+    display: grid;
+    grid-template-areas: 
+      'sidebar main main main main'
+      'sidebar main main main main'
+      'sidebar footer footer footer footer';
+  }
+  
+  
+  /* SIDEBAR START */
+  .sidebar {
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--purple-color), var(--black-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidebar nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .sidebar ul li {
+    list-style: none;
+  }
+  
+  
+  .sidebar nav ul li:hover a{
+    background-color: var(--white-color);
+    color: var(--purple-color);
+  }
+  
+  .sidebar nav ul li a {
+    width: 200px;
+    padding: 1em 0;
+    text-align: center;
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+  }
+  /* SIDEBAR END */
+  
+  
+  /* CONTENT START */
+  main {
+    padding: 2rem;
+  }
+  
+  main .hero {
+    height: 100vh;
+    display: flex;
+    flex-flow: row-reverse;
+    align-items: center;
+  }
+  
+  main .hero img {
+    width: 200px;
+    height: 50px;
+  }
+  
+  main .hero-content h1{
+    font-size: 65px;
+    font-weight: 300;
+    color: #4b2549;
+  }
+  
+  main .hero-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  main .hero-content p {
+    font-size: 20px;
+  }
+  
+  main .hero-content a.action-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--dark-grey-color);
+    color: var(--white-color);
+    text-decoration: none;
+    margin-top: 30px;
+    border-radius: 100px;
+  }
+  /* CONTENT END */
+  
+  
+  
+  /* FOOTER START */
+  .footer {
+    padding: 2rem;
+    background-color: var(--footer-color);
+  }
+  
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  footer ul li {
+    list-style: none;
+    text-align: center;
+  }
+  
+  footer ul li a p{
+    padding: 10px 10px;
+    font-size: 20px;
+    color: var(--black-color);
+  }
+  
+  footer ul li img {
+    height: 40px;
+    font-size: 50px;
+  }
+
+  /* FOOTER END */
+  
+  
+  
+  
+  
+  /* MOBILE VERSION */
+  @media only screen and (max-width: 900px) {
+    .container {
+      display: grid;
+      grid-template-areas: 
+        'sidebar sidebar sidebar'
+        'main main main'
+        'footer footer footer';
+        text-align: center;
+    } 
+  
+  
+    .sidebar {
+      width: 100%;
+      height: 47px;
+      background: linear-gradient(to right, var(--purple-color), var(--black-color));
+    }
+  
+      
+    .container .sidebar nav ul{
+      display: flex;
+      flex-direction: row;
+    }
+  
+  
+    .sidebar ul li {
+      list-style: none;
+    }
+  
+    .sidebar nav ul li {
+      width: 100px;
+    }
+  
+    .sidebar nav ul li:hover a{
+      width: 80px;
+      transition: .5s;
+      background-color: var(--white-color);
+      color: var(--purple-color);
+    }
+    
+    .sidebar nav ul li a {
+      width: 80px;
+      padding: 1em 0;
+      text-align: center;
+      display: block;
+      color: var(--white-color);
+      text-decoration: none;
+      font-size: .9rem;
+    }
+  
+    main .hero {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    main .hero img {
+      width: 200px;
+      height: 50px;
+      margin-left: 53px;
+    }
+  
+    main .hero-content h1{
+      font-size: 35px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  
+    main .hero-content h2 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    main .hero-content p {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    
+  }
