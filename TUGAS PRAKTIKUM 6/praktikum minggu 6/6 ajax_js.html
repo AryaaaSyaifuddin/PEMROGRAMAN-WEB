@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <h1>Belajar JavaScript : ajax</h1>
+    <script>
+        function getDataMahasiswa(success) {
+            let ajax = new XMLHttpRequest();
+            ajax. onreadystatechange = function() {
+                if (ajax. readyState === XMLHttpRequest.DONE && ajax.status === 200) {
+                    success (JSON.parse(ajax.response) )
+                }
+            }
+            ajax.open("get", "https://reqres.in/api/users/1")
+            ajax. send()
+        }
+            function success(result){
+                console.log(result);
+            }
+
+            console.log("mulai");
+            getDataMahasiswa(success);
+            console.log("halaman tampil");
+    </script>
+</body>
+</html>

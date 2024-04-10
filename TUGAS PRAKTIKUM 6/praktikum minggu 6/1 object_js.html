@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <h1>Belajar JavaScript : Tipe Data Object</h1>
+    <script>
+        let object = {}
+        console.log(object)
+
+        let mobil = {
+            merk : "Hotwhels",
+            jenis : "Blue Rodger Dodger"
+        }
+        console.log(mobil)
+
+        let mobil1 = {
+            merk : "Hotwheles",
+            jenis : "Red Baron"
+        }
+        mobil1.harga = 50
+        console.log(mobil1)
+
+        let mahasiswa = {
+            nama : "Arya",
+            usia : 21
+        }
+        console.log(mahasiswa)
+        mahasiswa.nama = "Daanish"
+        mahasiswa.usia = 13
+        console.log(mahasiswa)
+
+        let mobil2 = {
+            nama : "l300",
+            merk : "Mitsubishi",
+            harga : "100",
+            mesin : "Diesel",
+            hidupkan : ()=>{
+                return "Brum brum"
+            },
+        }
+        console.log(mobil2.merk + "" + mobil2.nama)
+        console.log(mobil2.hidupkan())
+
+
+        for(props in mobil2){
+            console.log(props + " = " + mobil2[props])
+        }
+    </script>
+</body>
+</html>
